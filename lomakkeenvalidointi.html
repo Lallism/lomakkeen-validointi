@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lomakkeen validointi</title>
+</head>
+<body>
+    <main>
+        <h1>Rekisteröitymislomake</h1>
+        <p><b>Siirry kentästä toiseen tab-näppäimellä.</b></p>
+        <form id="form">
+            <label class="label" for="user-id">Käyttäjä ID:</label>
+            <input class="textbar tb-short" id="user-id" type="text"><br>
+            <label class="label" for="password">Salasana:</label>
+            <input class="textbar tb-short" id="password" type="password"><br>
+            <label class="label" for="name">Nimi:</label>
+            <input class="textbar" id="name" type="text"><br>
+            <label class="label" for="address">Osoite:</label>
+            <input class="textbar" id="address" type="text"><br>
+            <label class="label" for="country">Maa:</label>
+            <select name="country" id="country">
+                <option value="none">(Valitse maa)</option>
+                <option value="finland">Suomi</option>
+            </select><br>
+            <label class="label" for="postcode">Postinumero:</label>
+            <input class="textbar tb-short" id="postcode" type="text"><br>
+            <label class="label" for="email">Sähköposti:</label>
+            <input class="textbar" id="email" type="text"><br>
+            <label class="label">Sukupuoli:</label>
+            <input id="male" type="radio" name="gender" value="male">
+            <label for="male">Mies</label>
+            <input id="female" type="radio" name="gender" value="female">
+            <label for="female">Nainen</label><br>
+            <label class="label">Kieli:</label>
+            <input type="checkbox" name="language" id="finnish">
+            <label for="finnish">Suomi</label>
+            <input type="checkbox" name="language" id="other">
+            <label for="other">Muu kuin suomi</label><br>
+            <label class="label" for="info">Lisätietoja:</label>
+            <textarea name="info" id="info" cols="48" rows="8"></textarea><br>
+            <input class="btn" type="submit" value="Lähetä">
+        </form>
+    </main>
+    <script src="lomakkeenvalidointi.js"></script>
+</body>
+</html>
